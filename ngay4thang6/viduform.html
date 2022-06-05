@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vi dụ form</title>
+</head>
+<body>
+    <form action="login" name="form-name">
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="uname">name:</label>
+                <input type="text" id="uname" name="uname"><br><br>
+            <label for="email">email:</label>
+                <input type="text" id="email" name="email"><br><br>
+            <label for="dob">Date of birth:</label>
+                <input type="text" id="dob" name="dob"><br><br>
+            <input type="submit" value="SUBMIT">
+        </fieldset>
+    </form>
+    <br><br><br>
+    <form action="login" name="form-name">
+        <fieldset>
+        <legend>LOGIN:</legend>
+        User namer:<br>
+        <input type="text" name="username" value="minh duc"><br>
+        User password:<br>
+        <input type="password" name="psw"><br><br>
+        <input type="submit" value="DUC">
+        <input type="reset">
+        </fieldset>
+    </form>
+    <br><br><br>
+    <form>
+        <fieldset>
+        <input type="radio" name="gender" value="Male"> Male<br>
+        <input type="radio" name="gender" value="FeMale"> Female<br>
+        <input type="radio" name="gender" value="Other"> Other<br><br>
+            <input type="submit" value="SUBMIT">
+        </fieldset>
+    </form>
+    <br><br><br>
+    <form action="/action_page" method="get">
+        <fieldset>
+            <input type="checkbox" name="vehicle1" value="Bike">Toi di xe may<br>
+            <input type="checkbox" name="vehicle2" value="Car">toi di xe o to<br><br>
+            <input type="submit" value="SUBMIT"><br>
+            <input type="button" onclick="alert('minh duc')" value="click me!">
+        </fieldset>
+    </form>
+    <br><br><br>
+    <table border="1">
+        <tr>
+            <th>Quy</th>
+            <th>Thang</th>
+            <th>Doanh thu</th>
+        </tr>
+        <tr>
+            <td rowspan="3">Mot</td>
+            <td>Mot</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Hai</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Ba</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Hai</td>
+            <td>Bon</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Nam</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Nam</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td colspan="3">tong</td>
+        </tr>
+    </table>
+
+</body>
+</html>
