@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh hien thi dau ra</title>
+</head>
+<body>
+    <h2>bai tap 1</h2>
+    <button type="button" onclick="hienthongbao()">click me</button>
+    <script>
+        function hienthongbao() {
+            alert("xin chao");
+        }
+    </script>
+    <br><br>
+    <h2>bai tap 2</h2>
+    <div id="demo">hehe</div>
+    <button type="button" onclick="hienthongbao1()">click vao</button>
+    <script>
+        function hienthongbao1() {
+            document.getElementById("demo").innerHTML = "xin chao ban";
+        }
+    </script>
+    <br><br>
+    <h2>bai tap 3</h2>
+    <button type="button" onclick="hientinnhan()">click vao</button>
+    <script>
+        function hientinnhan() {
+            document.write("xin chao");
+        }
+    </script>
+    <br><br>
+    <h2>bai tap 4</h2>
+    <button type="button" onclick="hientinnhan1()">click vao</button>
+    <script>
+        function hientinnhan1() {
+            console.log("xin chao cac ban");
+        }
+    </script>
+</body>
+</html>
