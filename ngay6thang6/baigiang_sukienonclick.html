@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai giang su kien onclick</title>
+</head>
+<body>
+    <p onclick="do_something()">click vao day</p>
+    <p id="demo">nhan vao day</p>
+</body>
+</html>
+<script>
+   function do_something() {
+       alert("thay gi khong");
+   }
+   var demo = document.getElementById("demo");
+   demo.addEventListener("click",langnhang);
+   function langnhang() {
+       alert("khong thay gi");
+   }
+</script>

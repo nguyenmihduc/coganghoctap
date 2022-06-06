@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ly thuyet chieu</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            text-align:center;
+        }
+        tr,th,td {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <h2>Register</h2>
+        <label>
+            <p>Name:</p>
+            <input type="text" name="name" required>
+        </label>
+        <br>
+        <label>
+            <p>Email:</p>
+            <input type="email" name="email" required>
+        </label>
+        <br>
+        <label>
+            <p>Phone:</p>
+            <input type="text" name="phone" required>
+        </label>
+        <br>
+        <p>Gender</p>
+        <label>
+            <input type="radio" name="gender" checked>Nam
+        </label>
+        <label>
+            <input type="radio" name="gender">Nu
+        </label>
+        <br>
+        <p>Tinh</p>
+            <select>
+                <option>HN</option>
+                <option>SG</option>
+                <option>DN</option>
+            </select>
+        <br><br>
+        <input type="file" name="image" multiple>
+        <br><br>
+        <input type="button" name="submit" value="Dang ky">
+        <br>
+    </form>
+    <br>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+</body>
+</html>
