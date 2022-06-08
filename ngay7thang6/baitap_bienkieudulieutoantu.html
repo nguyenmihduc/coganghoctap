@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+    <h3>Bài tập 1</h3>
+    <h2>Điểm vật lý:</h2><input type='text' value="" name='diem1' id='diem1'/>
+    <br>
+    <h3>Điểm hóa học:</h3><input type='text' value="" name='diem2' id='diem2'/>
+    <br>
+    <h3>Điểm sinh học:</h3><input type='text' value="" name='diem2' id='diem3'/>
+    <br>
+    <h3>Điểm trung bình:</h3><input type='text' value="" name='dtb' id='dtb' disabled/>
+    <br>
+    <button onclick="tinhtrungbinh()">Tính</button>
+    <script>
+        function tinhtrungbinh(){
+            let x1=document.getElementById('diem1').value;
+            x1 = parseInt(x1);
+            let x2=document.getElementById('diem2').value;
+            x2 = parseInt(x2);
+            let x3=document.getElementById('diem3').value;
+            x3 = parseInt(x3);
+            let tb = (x1 + x2 + x3) / 3;
+            let tbfix = tb.toFixed(2);
+            document.getElementById('dtb').value = tbfix;
+        }
+    </script>
+</body>
+</html>
