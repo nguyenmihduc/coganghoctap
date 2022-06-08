@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai giang cau truc dieu kien if else</title>
+</head>
+<body>
+    <p id="ketqua">ket qua:</p>
+    <script>
+        let a=5;
+        let b=5;
+        let c=5;
+        let answer;
+        if (a==b) {
+            if (a==c) {
+                answer="tat ca bang nhau";
+            }else {
+                answer="a bang b";
+            }
+        }else {
+            if (a==c) {
+                answer="a bang c";
+            }else {
+                if (b==c) {
+                    answer="b bang c";
+                }else {
+                    answer="tat ca khong bang nhau";
+                }
+            }
+        }
+        document.getElementById("ketqua").innerHTML=answer;
+    </script>
+    <br><br>
+    <p id="loichao"></p>
+    <script>
+        let time=14;
+        let greeting;
+        if (time<10) {
+            greeting="chao buoi sang";
+        }else {
+            if (time<20) {
+                greeting="chao ca ngay";
+            }else {
+                greeting="chao buoi toi";
+            }
+        }
+        document.getElementById("loichao").innerText=greeting;
+    </script>
+</body>
+</html>
