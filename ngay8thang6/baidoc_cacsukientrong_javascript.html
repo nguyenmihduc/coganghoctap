@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai doc cac su kien trong javascrip</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <button onClick="document.getElementById('demo').innerHTML=Date()">may gio roi?</button>
+<!--Trong đoạn mã trên, chúng ta xử lý sự kiện onclick của một nút. Khi nút được nhấn thì nội dung của thẻ với id là "demo" sẽ được thay đổi thành thời gian hiện tại.-->
+    <br><br>
+    <button onclick="this.innerHTML=Date()">may gio roi</button>
+    <br><br>
+    <p>Click the button to display the date.</p>
+    <button onclick="displayDate()">The time is?</button>
+    <p id="demo3"></p>
+    <script>
+        function displayDate() {
+            document.getElementById("demo3").innerHTML=Date();
+        }
+    </script>
+</body>
+</html>
