@@ -5,8 +5,8 @@
     <title>Biến kiểu dữ liệu và toán tử</title>
 </head>
 <body>
-    <h3>Bài tập 1</h3>
-    <h2>Điểm vật lý:</h2><input type='text' value="" name='diem1' id='diem1'/>
+    <h2>Bài tập 1: tính điểm trung bình</h2>
+    <h3>Điểm vật lý:</h3><input type=text' value="" name='diem1' id='diem1'/>
     <br>
     <h3>Điểm hóa học:</h3><input type='text' value="" name='diem2' id='diem2'/>
     <br>
@@ -26,6 +26,50 @@
             let tb = (x1 + x2 + x3) / 3;
             let tbfix = tb.toFixed(2);
             document.getElementById('dtb').value = tbfix;
+        }
+    </script>
+    <h2>Bài tập 2:chuyển đổi nhiệt độ</h2>
+    <h3>Độ C:</h3>
+    <input type="number" value="" id="doc">
+    <h3>Độ F:</h3>
+    <input type="number" value="" id="dof" disabled>
+    <br>
+    <button onclick="chuyennhietdo()">Chuyển đổi</button>
+    <script>
+        function chuyennhietdo() {
+            let c=document.getElementById("doc").value;
+            let f=(9*c + 160)/5;
+            document.getElementById("dof").value=f;
+        }
+    </script>
+    <br>
+    <h2>Bài tập 3: tính diện tích hình tròn</h2>
+    <h3>bán kính</h3>
+    <input type="number" id="bankinh" value="">
+    <h3>diện tích</h3>
+    <input type="number" id="dientich" value="" disabled>
+    <br>
+    <button onclick="tinhdientich()">tính diện tích</button>
+    <script>
+        function tinhdientich() {
+            let bk = document.getElementById("bankinh").value;
+            let dt = bk*bk*3.14;
+            document.getElementById("dientich").value=dt;
+        }
+    </script>
+    <br>
+    <h2>Bài tập 4: tính chu vi hình tròn</h2>
+    <h3>Nhập bán kính</h3>
+    <input type="number" id="bankinh2" value="">
+    <h3>Chu vi</h3>
+    <input type="number" id="chuvi" value="" disabled>
+    <br>
+    <button onclick="tinhchuvi()">tính chu vi</button>
+    <script>
+        function tinhchuvi() {
+            let bk2 = document.getElementById("bankinh2").value;
+            let cv = bk2*2*3.14;
+            document.getElementById("chuvi").value=cv;
         }
     </script>
 </body>
