@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh su kien chuot</title>
+</head>
+<body>
+    <form>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" id="myimage" style="width: 20%">
+        <p>click vao nut ben duoi de di chuyen qua bong sang phai</p>
+        <input type="button" value="click here" onclick="moveright()">
+    </form>
+    <script>
+        let imgobj = null;
+        imgobj=document.getElementById("myimage");
+        function init() {
+            imgobj=document.getElementById("myimage");
+            imgobj.style.position="relative";
+            imgobj.style.left="0px";
+        }
+        function moveright() {
+            imgobj.style.left=parseInt(imgobj.style.left) + 10 + "px";
+        }
+        window.onload=init();
+    </script>
+</body>
+</html>
