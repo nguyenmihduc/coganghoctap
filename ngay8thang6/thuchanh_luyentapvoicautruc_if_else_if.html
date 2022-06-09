@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh luyen tap voi cau truc if else if</title>
+</head>
+<body>
+    <script>
+        let username =prompt("Who are you?");
+        if (username=="ADMIN") {
+            let pass =prompt("nhap mat khau");
+                if (pass=="TheMaster") {
+                    alert("Welcome");
+                }else {
+                    if (pass=="null") {
+                        alert("Canceled");
+                    }else {
+                        alert("sai mat khau");
+                    }
+                }
+        }else {
+            alert("toi khong biet ban");
+        }
+    </script>
+</body>
+</html>
