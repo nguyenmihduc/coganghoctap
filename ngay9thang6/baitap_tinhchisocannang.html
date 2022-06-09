@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap tinh chi so can nang</title>
+</head>
+<body>
+    <h1>Tính Chỉ Số Cân Nặng</h1>
+    <h2>Nhập cân năng (kg):</h2>
+    <input type="text" name="" id="cannang">
+    <br><br>
+    <h2>Nhập chiều cao (m):</h2>
+    <input type="text" nam="" id="chieucao">
+    <br><br>
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <p id="ketqua"></p>
+    <script>
+        function kiemtra() {
+            let a = document.getElementById("cannang").value;
+            let b = document.getElementById("chieucao").value;
+            let bmi = a/(b*b);
+            if (bmi<18.5) {
+                document.getElementById("ketqua").innerText="Bạn đang bị gầy";
+            }else {
+                if (bmi<25) {
+                    document.getElementById("ketqua").innerText="Bạn bình thường";
+                }else {
+                    if (bmi<30) {
+                        document.getElementById("ketqua").innerText="Bạn đang bị béo";
+                    }else {
+                        document.getElementById("ketqua").innerText="Bạn đang bị quá béo";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
