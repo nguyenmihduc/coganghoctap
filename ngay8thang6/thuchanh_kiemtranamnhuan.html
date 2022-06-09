@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh kiem tra naam nhuan</title>
+</head>
+<body>
+    <script>
+        let years= parseInt(prompt("enter a year"));
+        if (years%4==0) {
+            if (years%100==0) {
+                if (years%400==0) {
+                    alert(years+"la nam nhuan");
+                }else {
+                    alert(years+"khong phai nam nhuan");
+                }
+            }else {
+                alert(years+"la nam nhuan");
+            }
+        }else {
+            alert(years+"khong phai nam nhuan");
+        }
+    </script>
+</body>
+</html>
