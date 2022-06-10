@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap luyen tap cau truc dieu kien 1</title>
+<!--    Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không-->
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let a = prompt("nhap a");
+        let b = prompt("nhap b");
+        let c = a%b;
+        if (c==0) {
+            document.getElementById("result").innerText="a chia het cho b";
+        }else {
+            alert("a khong chia het cho b");
+        }
+    </script>
+</body>
+</html>

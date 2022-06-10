@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap_luyentapcautrucdieukien1_bai5</title>
+    <!--  Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ-->
+</head>
+<body>
+<h2>XẾP HẠNG HỌC LỰC</h2>
+<input placeholder="Họ tên học sinh" id="name">
+<br><br>
+<input type="number" placeholder="Điểm bài kiểm tra" id="bkt">
+<br><br>
+<input type="number" placeholder="Điểm thi giữa kỳ" id="tgk">
+<br><br>
+<input type="number" placeholder="Điểm thi cuối kỳ" id="tck">
+<br><br>
+<button onclick="check()">Check</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let name = document.getElementById("name").value;
+        let a = +document.getElementById("bkt").value;
+        let b = +document.getElementById("tgk").value;
+        let c = +document.getElementById("tck").value;
+        let d = (a + b + c) / 3;
+        if (d >= 9) {
+            ad = name + " xếp loại giỏi";
+        } else if (d >= 7) {
+            ad = name + " xếp loại khá";
+        } else if (d >= 5) {
+            ad = name + " xếp loại trung bình";
+        } else {
+            ad = name + " xếp loại yếu";
+        }
+        document.getElementById("result").innerHTML = ad
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap_luyentapcautrucdieukien1_bai3</title>
+<!--    Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0-->
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let a =prompt("nhap so nguyen");
+        if (a > 0) {
+            document.getElementById("result").innerText="so "+ a + " lon hon 0";
+        }else {
+            if (a < 0) {
+                document.getElementById("result").innerText="so "+ a + " nho hon 0";
+            }else {
+                document.getElementById("result").innerText="so "+ a + " bang 0";
+            }
+        }
+    </script>
+</body>
+</html>
