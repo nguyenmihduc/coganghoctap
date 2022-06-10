@@ -6,34 +6,42 @@
 </head>
 <body>
     <h3>Amount</h3>
-        <input type="number" value="" id="dauvao">
+        <input type="text" id="amount">
     <br>
     <h3>From currency</h3>
         <select id="from">
-            <option>VND</option>
-            <option>USD</option>
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
         </select>
     <br>
     <h3>To currency</h3>
         <select id="to">
-            <option>VND</option>
-            <option>USD</option>
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
         </select>
-    <button onclick="chuyendoi()" >convert</button>
+    <button onclick="convert()" >CONVERT</button>
     <br>
-    <h3>Result:</h3>
-    <input type="number" id="daura" value="" disabled>
+    <P id="result"><P>
     <script>
-        function chuyendoi() {
-            let a = document.getElementById("dauvao").value;
-            let b = document.getElementById("from");
-            let c = document.getElementById("to");
-            let d;
-            if (b=VND) && (c=VND) {
-                d = a;
+    function convert() {
+        let amount = document.getElementById("amount").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        if (from == "USD" && to == "VND") {
+            result = "result:  " + (amount * 23000) + "  Đ";
+        }else {
+            if (from == "VND" && to == "USD") {
+                result = "result:  " + (amount / 23000) + "  $";
+            }else {
+                if (from == "VND") {
+                    result = "result:  " + amount + "  Đ";
+                }else {
+                    result = "result:  " + amount + "  $";
+                }
             }
-                document.getElementById("daura").value=d;
-            }
+        }
+            document.getElementById("result").innerHTML=result;
+    }
     </script>
 </body>
 </html>
