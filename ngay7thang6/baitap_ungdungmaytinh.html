@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap ung dung may tinh</title>
+</head>
+<body>
+<input type="text" id="hienthi" value="">
+<br><br>
+<button onclick="inputValue(this.value)" type="button" value="1">1</button>
+<button onclick="inputValue(this.value)" type="button" value="2">2</button>
+<button onclick="inputValue(this.value)" type="button" value="3">3</button>
+<button onclick="inputValue(this.value)" type="button" value="+">+</button>
+<br><br>
+<button onclick="inputValue(this.value)" type="button" value="4">4</button>
+<button onclick="inputValue(this.value)" type="button" value="5">5</button>
+<button onclick="inputValue(this.value)" type="button" value="6">6</button>
+<button onclick="inputValue(this.value)" type="button" value="-">-</button>
+<br><br>
+<button onclick="inputValue(this.value)" type="button" value="7">7</button>
+<button onclick="inputValue(this.value)" type="button" value="8">8</button>
+<button onclick="inputValue(this.value)" type="button" value="9">9</button>
+<button onclick="inputValue(this.value)" type="button" value="*">*</button>
+<br><br>
+<button onclick="xoa()" type="button">C</button>
+<button onclick="inputValue(this.value)" type="button" value="0">0</button>
+<button onclick="ketqua()" name="ketqua">=</button>
+<button onclick="inputValue(this.value)" type="button" value="/">/</button>
+<script>
+    let hienthi = document.getElementById("hienthi");
+    function inputValue(value) {
+        hienthi.value += value;
+    }
+    function xoa() {
+        hienthi.value="";
+    }
+    function ketqua() {
+        let ketqua = eval(hienthi.value);
+        hienthi.value = ketqua;
+    }
+</script>
+</body>
+</html>
