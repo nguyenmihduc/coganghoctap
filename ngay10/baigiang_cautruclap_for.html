@@ -6,56 +6,53 @@
 <!--    Hiển thị bảng cửu chương-->
 </head>
 <body>
-    <script>
-        for (let i=1 ; i<=10 ; i++) {
-            let product = 5 * i;
-            document.write("5 x " + i + " = " + product + "<br>");
-        //    document.write("5 x "+i+" = "+product); là in thẳng ra màn hình
-        }
-    </script>
-    <br><br>
-    <script>
-        for (let i=0,j=10 ; i<=10 ; i++,j--) {
-            let sum = i+j;
-            document.write(i + "+" + j + "=" + sum + "<br>");
-        }
-    </script>
-    <br><br>
-    <script>
-        let a =0;
-        for (; a<10; a++) {
-            document.write("a =" + a + "<br>");
-        }
-    </script>
-    <br><br>
-    <script>
-        let i;
-        for (i=0 ; i<8 ; i++) {
-            if (i === 3) {
-                continue;
-            }
-            document.write("the number is" + i + "<br>");
-        }
+<!--    <script>-->
+<!--        for (let i=1 ; i<=10 ; i++) {-->
+<!--            let product = 5 * i;-->
+<!--            document.write("5 x " + i + " = " + product + "<br>");-->
+<!--        //    document.write("5 x "+i+" = "+product); là in thẳng ra màn hình-->
+<!--        }-->
+<!--    </script>-->
+<!--    <br><br>-->
+<!--    <script>-->
+<!--        for (let i=0,j=10 ; i<=10 ; i++,j&#45;&#45;) {-->
+<!--            let sum = i+j;-->
+<!--            document.write(i + "+" + j + "=" + sum + "<br>");-->
+<!--        }-->
+<!--    </script>-->
+<!--    <br><br>-->
+<!--    <script>-->
+<!--        let a =0;-->
+<!--        for (; a<10; a++) {-->
+<!--            document.write("a =" + a + "<br>");-->
+<!--        }-->
+<!--    </script>-->
+<!--    <br><br>-->
+<!--    <script>-->
+<!--        let i;-->
+<!--        for (i=0 ; i<8 ; i++) {-->
+<!--            if (i === 3) {-->
+<!--                continue;-->
+<!--            }-->
+<!--            document.write("the number is" + i + "<br>");-->
+<!--        }-->
 
-        for (let b=15 ; b>0 ; b--) {
-            if (b===7) {
-                break;
-            }
-            document.write("lap lai 20 lan" + "<br>");
-        }
-    </script>
-    <br><br>
+<!--        for (let b=15 ; b>0 ; b&#45;&#45;) {-->
+<!--            if (b===7) {-->
+<!--                break;-->
+<!--            }-->
+<!--            document.write("lap lai 20 lan" + "<br>");-->
+<!--        }-->
+<!--    </script>-->
+<!--    <br><br>-->
     <script>
-        const cars = ["BMW", "Volvo", "Saab", "Ford"];
-
+        let cars = ["BMW", "Volvo", "Saab", "Ford"];
         let i, len, text;
-
-        for (i = 2, len = cars.length, text = ""; i < len; i++) {
+        for (i = 1, len = cars.length, text = ""; i < len; i++) {
 
             text += cars[i]+" ";
 
         }
-
         alert(text);
     </script>
 </body>
