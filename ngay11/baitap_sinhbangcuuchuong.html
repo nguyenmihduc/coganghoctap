@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h2>BẢNG CỬU CHƯƠNG</h2>
+<script>
+    let sout, a, b;
+    sout = "<table border='1' cellspacing='0' cellpadding='15'>"
+    for (b = 1; b < 10; b++) {
+        sout = sout + "<tr>";
+            for (a = 2; a < 10; a++) {
+                sout = sout + "<td>" + a + "x" + b + "=" + a*b;
+            }
+    }
+    document.write(sout);
+</script>
+</body>
+
+</html>
