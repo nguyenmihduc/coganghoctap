@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Phát triển một ứng dụng từ điển đơn giản. Ứng dụng cho phép tra cứu các từ tiếng Anh sang tiếng Việt. -->
+<!--Danh sách các từ được lưu trữ trong các mảng.-->
+<body>
+    <h2>TRA TỪ ĐIỂN ("banana", "apple", "orange", "pen", "pencil", "book")</h2>
+    <input type = "text" id="input">
+    <button onclick="dichtu()">Tra</button>
+    <p id = "result"></p>
+    <script>
+        function dichtu()
+        {
+            let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+            let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+            let str = document.getElementById("input").value;
+            let index_eng;
+            let result;
+            for (let i = 0; i <arr_eng.length; i++)
+            {
+                if (str == arr_eng[i])
+                {
+                    index_eng = i;
+                }
+                for (let j = 0; j < arr_vie.length; j++)
+                {
+                    if (index_eng == j)
+                    {
+                        result = arr_vie[j];
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+
+    </script>
+</body>
+</html>
