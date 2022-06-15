@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let cars = ["car1", "car2", "car3", "car4"];
+        cars.splice(2,1);
+        console.log(cars);
+
+        let animal = [
+            {
+                id: 1,
+                name: "cat",
+                size: "small",
+            },
+            {
+                id: 2,
+                name: "dog",
+                size: "small",
+            },
+            {
+                id: 3,
+                name: "snake",
+                size: "small",
+            }
+        ]
+        console.log(animal)
+        for (let i = 0; i < animal.length; i++){
+            if (animal[i].id == 2) {
+                animal.splice(i,1);
+            }
+        }
+        console.log(animal)
+    </script>
+
+</body>
+</html>

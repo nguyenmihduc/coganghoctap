@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Hướng dẫn học viên thực hành sử dụng hàm Map để thay đổi giá trị các thuộc tính của đối tượng trong mảng-->
+<body>
+    <script>
+        let animal = [
+            {
+                id: 1,
+                name: "cat",
+            },
+            {
+                id: 2,
+                name: "dog",
+            }
+        ]
+        let newanimal = animal.map(function (thucung) {
+            if (thucung.name == "dog") {
+                thucung.id = 3;
+            }
+            return thucung;
+        });
+        console.log(newanimal);
+    </script>
+</body>
+</html>
