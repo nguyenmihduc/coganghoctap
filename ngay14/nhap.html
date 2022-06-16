@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // function myFunction(x) {
+        //     return x*2;
+        // }
+        // let number = 10
+        // let resul = myFunction(number);
+        // alert(resul)
+
+        // // function abc(x) {
+        // //     if (x == 1) {
+        // //         return true;
+        // //     }else {
+        // //         return false;
+        // //     }
+        // // }
+
+        // function abc(b) {
+        //     return 40;
+        // }
+        // let result = abc(6);
+        // alert(result)
+
+        // function square(x) {
+        //    return  x * x;
+        // }
+        // let y = 5;
+        // let result = square(y);
+        // console.log(y)
+
+        function turnOn(machine) {
+            machine.isOn = true;
+        }
+        let computer = {
+            isOn: false
+        };
+        turnOn(computer);
+        console.log(computer.isOn); // true;
+    </script>
+</body>
+</html>

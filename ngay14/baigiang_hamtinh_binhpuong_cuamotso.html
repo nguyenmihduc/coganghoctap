@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    binh phuong cua <input type="text" id="input" oninput="calculate()"> la <span id="result"></span>
+    <script>
+        function square(number) {
+            let result = number*number;
+            return result;
+        }
+        function calculate() {
+            let input = document.getElementById("input").value;
+            let result = square(input);
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

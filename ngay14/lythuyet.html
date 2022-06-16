@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let str = [2,5,3,7,9,6,8,9]
+        let x = prompt("nhap so:")
+        let index = -1;
+        let count = 0;
+        for (let i =0; i < str.length; i++) {
+            if (x == str[i]) {
+                index = i
+                count++
+            }
+
+        }if (count == 0) {
+            document.write("phan tu"+ x + "ko ton tai");
+        }else {
+            document.write("phan tu "+ x + " co ton tai va xuat hien " + count + " lan tai vi tri " + index);
+        }
+
+
+      // let md = [3,5,6,2,1];
+      // let number = prompt("enter a number:");
+      // let index = -1
+      // for (let i = 0; i < md.length; i++) {
+      //     if (number == md[i]) {
+      //         index = i;
+      //         break;
+      //     }
+      // }
+      // if (index === -1) {
+      //     console.log(-1)
+      // } else {
+      //     console.log(index)
+      // }
+
+      // let arr = [1,2,5,5,9,8,2,9];
+      // let max = arr[0];
+      // for (let i = 0;i <arr.length; i++)
+      // {
+      //     if (max < arr[i])
+      //     {
+      //         max = arr[i];
+      //     }
+      // }
+      // for (let i = 0;i <arr.length; i++)
+      // {
+      //     if (max === arr[i])
+      //     {
+      //         console.log(i);
+      //     }
+      // }
+    </script>
+</body>
+</html>
