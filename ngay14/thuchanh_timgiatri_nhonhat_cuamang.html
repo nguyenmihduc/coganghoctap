@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    Mục tiêu-->
+<!--    Luyện tập tạo và sử dụng hàm, truyền mảng vào hàm.-->
+<!--    Mô tả bài toán-->
+<!--    Xây dựng hàm nhận vào một tham số là một mảng cho trước. -->
+<!--    Hàm thực hiện tìm giá trị nhỏ nhất trong mảng và trả về giá trị đó. -->
+<!--    Sử dụng hàm vừa xây dựng trên với mảng như sau:-->
+<!--    arr1: [3, 5, 1, 8, -3, 7, 8]-->
+<!--    arr2: [7, 12, 6, 9, 20, 56, 89]-->
+<!--    arr3: []-->
+<!--    arr4: [0, 0, 0, 0, 0, 0]-->
+</head>
+<body>
+    <script>
+        function minarray(arr) {
+            let min = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        let arr1 = [3, 5, 1, 8, -3, 7, 8];
+        let abc = minarray(arr1);
+        alert(abc);
+    </script>
+</body>
+</html>
