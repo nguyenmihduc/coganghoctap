@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<!--    Nâng cấp game "Hãy thử đoán xem!"-->
+<!--    1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi": -->
+<!--    cho phép người dùng bắt đầu  chơi hoặc chơi lại-->
 </head>
 <body>
-
+    <button onclick="doanso()">start</button>
+    <script>
+        function doanso() {
+            let khoang = +prompt("bạn muốn đoán số trong khoảng nào:");
+            console.log(khoang);
+            let sodoan = +prompt("nhập số dự đoán của bạn:");
+            console.log(sodoan);
+            let sorandom = Math.floor(Math.random() * khoang);
+            let count = 0;
+            while (sodoan !== sorandom) {
+                count++;
+                if (count == 4) {
+                    alert("bạn đã hết số lần đoán");
+                    break;
+                } else if (sodoan < sorandom) {
+                    alert("số bạn đón nhỏ hơn kết quả");
+                } else if (sodoan > sorandom) {
+                    alert("số bạn đón lớn hơn kết quả");
+                }
+                prompt("nhập số dự đoán của bạn:");
+            }
+            if (count == 4) {
+                document.write("bạn đã hết số lần đoán");
+            } else {
+                document.write("chúc mừng bạn đã đoán đúng");
+            }
+        }
+    </script>
 </body>
 </html>
