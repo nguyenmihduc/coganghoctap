@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.-->
+<body>
+    <script>
+        let array = []
+        let number;
+        for (let j = 0; j < 10; j++) {
+            number = prompt("nhap so ngueyn:");
+            array.push(number)
+        }
+        document.write("mang cu la " + array + "<br>")
+        // let array = [-11,6,35,2,23,-6,19,10,-1,7];
+        let first = 0;
+        let last = array.length-1;
+        let b = 0
+        for (let i = 0; first < last; i++) {
+            b = array[first];
+            array[first] = array[last];
+            array[last] = b;
+            first++;
+            last--;
+        }
+        document.write("mang moi la " + array)
+    </script>
+</body>
+</html>

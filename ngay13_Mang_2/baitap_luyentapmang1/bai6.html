@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. -->
+<!--Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" -->
+<!--còn lại in ra "V is not in the array".-->
+<body>
+    <script>
+        let array = []
+        let number;
+        for (let j = 0; j < 10; j++) {
+            number = prompt("nhap so ngueyn:");
+            array.push(number)
+        }
+        document.write(array + "<br>")
+        // let array = [1,2,3,4,5,6,7,8,9,10];
+        let v = prompt("nhap so v");
+        let index = -1;
+        for ( let i = 0; i <array.length; i++) {
+            if (v == array[i]) {
+                index = i;
+            }
+        }
+        if (index == -1) {
+            document.write("V = " + v + " khong co trong mang")
+        } else {
+            document.write("V = " + v + " co trong mang tai vi tri: " + index)
+        }
+    </script>
+</body>
+</html>

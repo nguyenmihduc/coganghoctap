@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, -->
+<!--nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, -->
+<!--nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử -->
+<!--ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)-->
+<body>
+    <script>
+        // let array = []
+        // let number;
+        // for (let j = 0; j < 10; j++) {
+        //     number = prompt("nhap so ngueyn:");
+        //     array.push(number)
+        // }
+        // document.write(array + "<br>")
+        let array = [1,2,3,4,5,6,7,8,9,10];
+        let v = prompt("nhap so v");
+        let index = -1;
+        for ( let i = 0; i <array.length; i++) {
+            if (v == array[i]) {
+                index = i;
+            }
+        }
+        if (index == -1) {
+            document.write("V = " + v + " khong co trong mang");
+        } else {
+            array.splice(index,1);
+            alert("da xoa v khoi mang");
+            document.write(array);
+        }
+    </script>
+</body>
+</html>

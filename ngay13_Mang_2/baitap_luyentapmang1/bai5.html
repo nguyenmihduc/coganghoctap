@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi-->
+<body>
+    <script>
+        let newarray = []
+        let array = [-11,6,35,2,23,-6,19,10,-1,7];
+        let nguyenam = array[0]
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                nguyenam = array[i];
+                newarray.push(array[i])
+                count++;
+
+            }
+        }
+        document.write("co " + count + " so nguyen am " + "<br>");
+        document.write("la " + newarray.join(" va "));
+
+    </script>
+</body>
+</html>

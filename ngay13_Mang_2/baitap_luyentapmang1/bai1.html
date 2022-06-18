@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem -->
+<!--có bao nhiêu số nguyên lớn hơn hoặc bằng 10.-->
+<body>
+    <script>
+        let array =[-11,6,35,2,23,-6,10,10,-1,7];
+        let new_array = []
+        let number = array[0];
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] >= 10) {
+                new_array.push(array[i]);
+                count++;
+            }
+        }
+        document.write("co " + count + " so >= 10 la: ")
+        document.write(new_array)
+
+
+    </script>
+</body>
+</html>
