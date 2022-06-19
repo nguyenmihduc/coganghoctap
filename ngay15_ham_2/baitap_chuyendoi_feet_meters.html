@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // let feetnumber = prompt("nhap so feet");
+        //     let met = 0.305 * feetnumber
+        //     document.write(feetnumber + " feet bang "+ met + " met " + "<br>")
+        //
+        // let metnumber = prompt("nhap so met");
+        //     let feet = 3.279 * metnumber
+        //     document.write(metnumber + " met bang " + feet + " feet ")
+
+        function feet_to_met(feet) {
+            met = 0.305 * feet;
+            return met;
+        }
+        function met_to_feet(met) {
+            feet = 3.279 * met;
+            return feet;
+        }
+
+        feet = prompt("nhap so feet");
+        let ketquamet = feet_to_met(feet);
+        document.write(feet + " feet bang "+ ketquamet + " met " + "<br>");
+
+        met = prompt("nhap so met");
+        let ketquafeet = met_to_feet(met);
+        document.write(met + " met bang "+ ketquafeet + " feet " + "<br>");
+
+    </script>
+</body>
+</html>
