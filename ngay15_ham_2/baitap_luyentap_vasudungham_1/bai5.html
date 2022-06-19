@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>TRA tên ngôi sao "Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"</h2>
+    <input type = "text" id="input">
+    <button onclick="trasao()">Tra</button>
+    <p id = "result" ></p>
+    <script>
+        function trasao() {
+            let ngoisao = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"]
+            let chomsao = ["Ursa_Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa_Major","Leo"]
+            let namesao = document.getElementById("input").value;
+            let index = -1;
+            for (let i = 0; i < ngoisao.length; i++) {
+                if (namesao == ngoisao[i]) {
+                    index = i;
+                    document.getElementById("result").innerHTML = "thuoc chom sao " + chomsao[index];
+                }
+            }
+            if (index == -1) {
+                document.getElementById("result").innerHTML = "ten sao khonng ton tai";
+            }
+        }
+    </script>
+</body>
+</html>

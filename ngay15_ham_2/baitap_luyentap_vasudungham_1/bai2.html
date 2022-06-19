@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị -->
+<!--cho lời gọi hàm. Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.-->
+<body>
+<!--    <button onclick="nhapso()">nhap so</button>-->
+<!--    <script>-->
+<!--        function nhapso() {-->
+<!--            let a = +prompt("nhap so a")-->
+<!--            document.write("new number: " + (a+1))-->
+<!--        }-->
+<!--    </script>-->
+
+<!--    <input id = "number" oninput="numbercong1()" value="" type="number">-->
+<!--    <p id = "ketqua"></p>-->
+<!--    <script>-->
+<!--        function numbercong1() {-->
+<!--            let num = +document.getElementById("number").value;-->
+<!--            document.getElementById("ketqua").innerHTML = num + 1-->
+<!--        }-->
+<!--    </script>-->
+
+    <input id = "number" oninput="numbercong1()" value="" type="number">
+
+    <script>
+        function congthem1(a) {
+            return a + 1
+        }
+        function numbercong1() {
+            let b = +document.getElementById("number").value;
+            let c = congthem1(b)
+            console.log(c)
+        }
+    </script>
+</body>
+</html>
