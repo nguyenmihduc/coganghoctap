@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    binh phuong cua :<input id = "input" oninput="tinhtoan()">-->
+<!--    co ket qua la: <span id = "hienthiketqua"></span>-->
+
+<!--    do F :<input id = "input" oninput="tinhtoan()">-->
+<!--    co ket qua  do C la: <span id = "hienthiketqua"></span>-->
+
+    <script>
+        function timmin(mang) {
+            let min = mang[0][0];
+            for (let i = 0; i < mang.length; i++) {
+                for (let j = 0; j < mang[i].length; j++) {
+                    if (mang[i][j] < min) {
+                        min = mang[i][j];
+                    }
+
+                }
+
+            }
+            return min;
+        }
+        array = [
+            [3, 5, 1, 8, -3, 7, 8],
+
+            [7, 12, 6, 9, 20, 56, 89],
+
+            [],
+
+            [0, 0, 0, -57, 0, 0]
+        ]
+        let minarray = timmin(array);
+        console.log(minarray)
+
+       //  function timmin(mang) {
+       //          let min = mang[0];
+       //          for (let i = 0; i < mang.length; i++) {
+       //                  if (mang[i] < min) {
+       //                      min = mang[i];
+       //
+       //                  }
+       //          }
+       //          return min;
+       //  }
+       //  array = [3, 5, 1, 8, -3, 7, 8]
+       // let minarray = timmin(array);
+       // console.log(minarray)
+
+
+        // let min = array[0][0];
+        //     for (let i = 0; i < array.length; i++) {
+        //         for (let j = 0; j < array[i].length; j++) {
+        //             if (array[i][j] < min) {
+        //                 min = array[i][j];
+        //             }
+        //         }
+        //
+        //     }
+        // console.log(min)
+
+
+        // let somin = timin(array);
+        // document.write(somin);
+
+        // function chuyendoinhietdo(f) {
+        //     let c = (f - 32)/1.8;
+        //     return c;
+        // }
+        //
+        // function tinhtoan() {
+        //     let dauvao = document.getElementById("input").value;
+        //     let ketqua = chuyendoinhietdo(dauvao);
+        //     document.getElementById("hienthiketqua").innerHTML = ketqua;
+
+            // document.getElementById("hienthiketqua").innerHTML = binhphuong(document.getElementById("input").value)
+        // }
+<!--        function loimoichoigame(traloi) {-->
+<!--            let result = "";-->
+<!--            if (traloi) {-->
+<!--                result = "chung ta se choi co nhe"-->
+<!--            } else {-->
+<!--                result = "hen ban luc khac"-->
+<!--            }-->
+<!--            return  result-->
+<!--        }-->
+<!--        let xacnhancautraloi = confirm("ban co muon choi game khong?")-->
+<!--        let cautraloi = loimoichoigame(xacnhancautraloi)-->
+<!--        document.write(cautraloi)-->
+
+        // function hamrong() {
+        //     let x = arguments[0];
+        //     let y = arguments[1];
+        //     alert(x);
+        //     alert(y)
+        // }
+        // hamrong("xin chao","duc");
+
+        // function binhphuong(number) {
+        //     let result = number * number;
+        //     return result
+        // }
+        //
+        // function tinhtoan() {
+        //     let dauvao = document.getElementById("input").value;
+        //     let ketqua = binhphuong(dauvao);
+        //     document.getElementById("hienthiketqua").innerHTML = ketqua;
+        //
+        //     // document.getElementById("hienthiketqua").innerHTML = binhphuong(document.getElementById("input").value)
+        // }
+
+        // function myFunction(x) {
+        //     return x*2;
+        // }
+        // let number = 10
+        // let resul = myFunction(number);
+        // alert(resul)
+
+        // // function abc(x) {
+        // //     if (x == 1) {
+        // //         return true;
+        // //     }else {
+        // //         return false;
+        // //     }
+        // // }
+
+        // function abc(i) {
+        //     return 40;
+        // }
+        // let result = abc(6);
+        // alert(result)
+
+        // function square(x) {
+        //    return  x * x;
+        // }
+        // let y = 5;
+        // let result = square(y);
+        // console.log(y)
+
+        // function turnOn(machine) {
+        //     machine.isOn = true;
+        // }
+        // let computer = {
+        //     isOn: false
+        // };
+        // turnOn(computer);
+        // console.log(computer.isOn); // true;
+
+        // function func1(j){
+        //     if(j == 2)
+        //         return 2;
+        //     return j * func1(j - 1);
+        // }
+        //
+        // let result = func1(5)
+        // alert(result)
+
+        // function add(a,b) {
+        //     return a + b;
+        // }
+        // let sum = add("4","3");
+        // alert(sum);
+
+        // function binhphuong(x) {
+        //     return x*x;
+        // }
+        // let y = 6;
+        // let ketqua = binhphuong(y);
+        // alert(ketqua);
+        // let z = 7;
+        // let ketqua2 = binhphuong(z);
+        // document.write(ketqua2)
+
+    </script>
+</body>
+</html>

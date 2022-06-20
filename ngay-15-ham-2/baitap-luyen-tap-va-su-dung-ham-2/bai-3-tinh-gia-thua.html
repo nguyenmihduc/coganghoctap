@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.-->
+<body>
+    <script>
+
+        function giaithua(x) {
+            let product = 1;
+            for(let i = 1; i <= x; i++) {
+                product = product * i
+            }
+            return product
+        }
+
+        let number = prompt("nhap")
+        document.write(number + "!" + " = " + giaithua(number));
+    </script>
+</body>
+</html>

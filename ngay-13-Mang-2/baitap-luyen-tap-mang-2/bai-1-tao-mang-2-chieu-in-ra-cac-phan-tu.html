@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  -->
+<!--in ra các phần tử trong mảng. Chú ý: Sử dụng vòng lặp for lồng nhau-->
+<body>
+    <script>
+        let a = [
+            [8, 11, 9, 4],
+            [7, 0, 7, 27, 3],
+            [7, 4, 28, 14, 5],
+            [3, 10, 26, 7, 9]
+        ]
+        // document.write(a + "<br>")
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            // document.write(a[i] + "<br>")
+            for (let j =0; j < a[i].length; j++) {
+                // if (i + j <= 4) {
+                //     a[i][j] = 0
+                // }
+                document.write(a[i][j] + "<br>");
+                count++;
+            }
+            console.log(count)
+        }
+        // for (let i = 0; i < a.length; i++) {
+        //     document.write(a[i].join("&nbsp;&nbsp") + "<br>")
+        // }
+    </script>
+
+</body>
+</html>

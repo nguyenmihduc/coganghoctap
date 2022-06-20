@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function xeMay(dungTich, mauSac, tinhTrang) { //định nghĩa lớp xeMay với các thuộc tính dungTich, mauSac, tinhTrang
+            this.dungTich = dungTich;
+            this.mauSac = mauSac;
+            this.tinhTrang = tinhTrang;
+            this.getInfo = function () {
+                return this.dungTich + " " + this.mauSac + " " + this.tinhTrang;
+            }
+        }
+
+        // Một hạn chế của 1.1 là hàm getInfo() được tạo ra mỗi lần bạn tạo lại một đối tượng mới. Thỉnh thoảng đó có thể
+        // là cách bạn muốn nhưng rất hiếm gặp, điều này đồng nghĩa là nó sẽ tiêu tốn nhiều tài nguyên bộ nhớ hơn.
+        //     Một cách làm tiết kiệm hơn là thêm phương thức getInfo() vào bên trong prototype của hàm khởi tạo.
+        // function xeMay(dungTich, mauSac, tinhTrang) {
+        //     this.dungTich = dungTich;
+        //     this.mauSac = mauSac;
+        //     this.tinhTrang = tinhTrang;
+        // }
+        // xeMay.prototype.getInfo = function () {
+        //     return this.dungTich + " " + this.mauSac + " " + this.tinhTrang;
+        // };
+
+        let xemay1 = new xeMay(125, "đỏ", "cũ");     // khởi tạo đối tượng xemay 1,2,3 trong lớp xeMay và truyền vào giá trị của dungTich, mauSac, tinhTrang
+        let xemay2 = new xeMay(110, "đen", "mới");
+        let xemay3 = new xeMay(100, "xanh", "cũ");
+
+        let xm1 = xemay1.getInfo()
+        let xm2 = xemay2.getInfo()
+        let xm3 = xemay3.getInfo()
+
+        console.log(xm1)
+        console.log(xm2)
+        console.log(xm3)
+
+        // 2. Sử dụng object literals
+        // Literals là một cách tạo đối tượng và mảng trong Javascript ngắn nhất trong Javascript.
+        //     Để tạo ra một đối tượng rỗng, bạn có thể làm như sau:
+
+        let apple = {
+            type: "tao uc",
+            color: "do",
+            getInfo: function () {
+                return alert(this.type + " " + this.color)
+            }
+        }
+        apple.type = "tao trung quoc"
+        apple.getInfo()
+
+        // 3. Singleton sử dụng một hàm
+        // Cách thứ ba được trình bày trong bài viết này là sự kết hợp của hai cách trên mà bạn đã thấy.
+        //     Bạn có thể sử dụng một hàm để xác định một đối tượng singleton. Đây là cú pháp:
+
+        let xemay4 = new function () {
+            this.dungtich = 175;
+            this.mausac = "xanh";
+            this.tinhtrang = "moi";
+            this.getInfo = function () {
+                return this.dungtich + " " + this.mausac + " " + this.tinhtrang;
+            };
+        }
+        xemay4.dungtich = 350
+        console.log(xemay4.getInfo())
+    </script>
+</body>
+</html>

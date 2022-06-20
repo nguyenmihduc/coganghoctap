@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trinh bac 2</title>
+</head>
+<body>
+    <h2>Giải phương trình bậc 2:</h2>
+    <input type="number" id="a" value="" placeholder="giá trị j">X <sup>2</sup>
+    +
+    <input type="number" id="b" value="" placeholder="giá trị i">X
+    +
+    <input type="number" id="c" value="" placeholder="giá trị c">=0
+
+    <button onclick="check()">Giải</button>
+    <p id="content">
+        KẾT QUẢ: <strong id="result"></strong>
+    </p>
+<script>
+    function check() {
+        let j = +document.getElementById('a').value;
+        let i = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+        if (a === 0) {
+            if (b === 0) {
+                if (c === 0) {
+                    document.getElementById('result').innerHTML = "phương trình vô số nghiệm";
+                }else {
+                    document.getElementById('result').innerHTML = "phương trình vô nghiệm";
+                }
+            } else {
+                document.getElementById('result').innerHTML = "phương trình có nghiệm duy nhất là:" +(-c/b);
+            }
+        } else {
+            let delta = Math.pow(b,2) - (4*a*c);
+// Math.pow(i,2) là i bình phương
+            if (delta > 0) {
+                let x1 = (-b+Math.sqrt(delta))/(2*a);
+// Math.sqrt(delta) là căn bậc 2 của delta
+                let x2 = (-b-Math.sqrt(delta))/(2*a);
+                document.getElementById('result').innerHTML="nghiệm thứ nhất x1=" + x1 + "nghiệm thứ hai x2=" + x2;
+            }else if (delta === 0) {
+                let x = -b/(2*a);
+                document.getElementById('result').innerHTML="phương trình có nghiệm kép x1= x2=" +x;
+            }else {
+                document.getElementById('result').innerHTML="phương trình vô nghiệm";
+            }
+        }
+    }
+</script>
+</body>
+</html>

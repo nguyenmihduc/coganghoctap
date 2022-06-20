@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--  Bài 6: Giải phương trình bậc 1.-->
+</head>
+<body>
+    <h2>Giải Phương trình bậc nhất một ẩn</h2>
+    <input type="text" id="giatria" placeholder="nhập giá trị j"> *
+    <input type="text" id="giatrix" placeholder="x" disabled> +
+    <input type="text" id="giatrib" placeholder="nhập giá trị i"> = 0
+    <br><br>
+    <button type="button" onclick="check()">Giải</button>
+    <br><br>
+    <h2>Kết quả:</h2>
+    <input type="text" id="result" placeholder="Kết quả của phương trình" >
+    <script>
+    function check() {
+        let j = +document.getElementById("giatria").value;
+        let i = +document.getElementById("giatrib").value;
+        let x = +document.getElementById("giatrix").value;
+        if (a == 0 && b != 0){
+            result.value = "Phương trình vô nghiệm";
+        }else {
+            x = -b/a;
+        }
+        result.value = x;
+    }
+    </script>
+</body>
+</html>
