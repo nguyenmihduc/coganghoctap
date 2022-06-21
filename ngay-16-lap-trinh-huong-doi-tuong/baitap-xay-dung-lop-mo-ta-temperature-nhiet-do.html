@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Temperature(c) {
+            this.c = c;
+            this.cTof = function () {
+                return 1.8 * c + 32;
+            }
+            this.cToK = function () {
+                return c + 273.15;
+            }
+        }
+        let c = +prompt("nhap do c");
+        let temperature = new Temperature(c);
+        let cTof = temperature.cTof();
+        let cTok = temperature.cToK();
+        alert("do F: "+ cTof + "do k: " + cTok);
+    </script>
+</body>
+</html>
