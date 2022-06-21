@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        // Một đối tượng sau day la Hằng Đối tượng (object literal) -
+        //     chúng ta đã định nghĩa các thành phần, nội dung của đối tượng ngay khi tạo ra nó.
+        let person = {
+            name: {
+                first: 'Bob',
+                last: 'jame',
+            },
+            age: 41,
+            gender: 'male',
+            interests: ['musix', 'sport'],
+            bio: function () {
+                alert(this.name.first + '' +this.name.last + ' is ' + this.age + ' years old he likes ' + this.interests[0] + ' and ' + this.interests[1] )
+            },
+            greeting: function () {
+                alert('i am ' + this.name.first + ' xin chao ban')
+            }
+        }
+        // đây là truy xuất các thuộc tính và phương thức của đối tượng person
+        console.log(person.name.first)
+        console.log(person.gender)
+        person.bio()
+        person.greeting()
+        console.log(person['age']) //Đây là cách khá giống với cách bạn dùng truy xuất các phần tử của một mảng, và căn bản nó là như vậy
+
+        person.gender = 50; //thay đổi giá trị cuả các thành phần
+        console.log(person.gender)
+      // Mỗi thành phần thuộc đối tượng có thể có bất kỳ giá trị gì - với đối tượng person ở trên chúng ta có
+      // giá trị của các thuộc tính (thành phần) của đối tượng này là một chuỗi, một số, hai mảng và hai hàm.
+      //     Bốn thành phần đầu là các thành phần dữ liệu, và được gọi là các thuộc tính (property) của đối tượng.
+      //     Hai thành phần sau là các hàm, nó cho phép đối tượng thao tác với các thành phần dữ liệu (thuộc tính)
+      // và được gọi là các phương thức (method).
+
+        person.eyes = "blue" //thêm thành phần (kèm giá trị) và phương thức (kèm giá trị) cho đối tượng person
+        person.farewell = function () { alert("bye bye");}
+
+        let myDataName = 'height'; //thêm thành phần (kèm giá trị) và phương thức (kèm giá trị) cho đối tượng person
+        let myDataValue = '1.75m';
+        person[myDataName] = myDataValue;
+
+        console.log(person)
+    </script>
 </body>
 </html>

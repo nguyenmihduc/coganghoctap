@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
+<!--tạo được đối tượng-->
+<!--truy cập đc các thành phần của lớp-->
 <body>
-$END$
+    <script>
+        // // định nghĩa lớp student với các thuộc tính id, name, địa chỉ
+        // function Student(id, name, address) {
+        //     this.id = id;
+        //     this.name = name;
+        //     this.address = address;
+        //     // phương thức getinfor trả về thông tin cảu đối tượng
+        //     this.getInfor = function () {
+        //         return "Id = " + this.id + " Name " + this.name + " address " + this.address;
+        //     }
+        // }
+        // // khởi tạo đối tượng stundent1 trong lớp student và truyền vào giá trị của id, name, address
+        // let student1 = new Student(45,"minh","hanoi");
+        // //thực thi phương thức getInfor thông qua đối tượng student1
+        // document.write(student1.getInfor())
+
+
+        // khởi tạo đối tượng student với các thuộc tính id, name, address va gán giá trị cho các thuộc tính
+        // đây là hằng đối tượng Object literal
+        let stundent = {
+            id: 43,
+            name: "minh Nam",
+            address: "Ha Noi",
+            // phương thức getinfor trả về thông tin cảu đối tượng
+            getInfor: function () {
+                return "Id = " + this.id + " Name " + this.name + " address " + this.address;
+            }
+        }
+        // goị thuộc tính và phương thức thông qua đối tượng student
+        console.log(stundent.name);
+        console.log(stundent.getInfor());
+    </script>
 </body>
 </html>
