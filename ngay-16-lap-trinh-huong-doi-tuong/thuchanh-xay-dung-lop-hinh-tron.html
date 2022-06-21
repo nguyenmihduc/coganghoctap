@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Cirle(radius, color) {
+            this.radius = radius;
+            this.color = color;
+            this.Circle = function () {
+
+            }
+            this.getRadius = function () {
+                return this.radius;
+            }
+            this.getArea = function () {
+                return Math.PI * this.radius * this.radius;
+            }
+        }
+        let cirle = new Cirle(9, "blue")
+        let color = cirle.color = "white"
+        let radius = cirle.getRadius()
+        let area = cirle.getArea()
+        alert(radius + " " + area + " " + color)
+
+    </script>
+</body>
+</html>
