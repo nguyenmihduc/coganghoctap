@@ -1,0 +1,26 @@
+function moveUp() {
+if (hero.top > 0 ) {
+hero.moveUp();
+}
+document.getElementById('game').innerHTML = hero.getHeroElement();
+setTimeout(moveUp, 100)
+}
+
+function moveDown() {
+if (hero.top <  ) {
+hero.moveDown();
+}
+document.getElementById('game').innerHTML = hero.getHeroElement();
+setTimeout(moveDown, 100)
+}
+
+
+// if (hero.left < window.innerWidth - hero.size) {
+//   hero.moveRight();
+//   }
+// if (hero.left >  0 ) {
+//   hero.moveLeft();
+// }
+// if (hero.top < window.innerHeight - hero.size) {
+//   hero.moveDown();
+// }
