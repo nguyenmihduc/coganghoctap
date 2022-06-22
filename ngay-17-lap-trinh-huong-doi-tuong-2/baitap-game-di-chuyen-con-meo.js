@@ -29,7 +29,7 @@
         }
     }
 
-    let hero = new ConMeo('meo.png', 200, 500, 100);
+    let hero = new ConMeo('meo3.png', 200, 500, 150);
     function moveUp() {
         if (hero.top > 0 ) {
         hero.moveUp();
