@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        // class Person {                                                      // Khai báo lớp
+        //     constructor(firstName, lastName, age, eyeColor) {
+        //         this._firstName = firstName;
+        //         this._lastName = lastName;
+        //         this._age = age;
+        //         this._eyeColor =eyeColor;
+        //     }
+        //     changeName(name) {
+        //         this._lastName = name;
+        //     }
+        // }
+        // let myFather = new Person("John", "Doe", 50, "blue");                // Khởi tạo đối tượng
+        // let myMother = new Person("Maria", "Jame", 40, "green");
+        // myFather.changeName("Bruce")
+        // console.log(myFather)
+        // console.log(myMother)
+
+        // function Circle(radius, color) {
+        //     this.radius = radius;
+        //     this.color = color;
+        //     this.getRadius = function (radius) {
+        //         return this.radius = radius;
+        //     };
+        //     this.getArea = function () {
+        //         return Math.PI * this.radius * this.radius;
+        //     };
+        //     this.getColor = function (color) {
+        //         return this.color = color
+        //     };
+        // }
+        class Circle {
+            constructor (radius, color) {
+                this.radius = radius;
+                this.color = color;
+            }
+            getRadius(radius) {
+                return this.radius = radius;
+            }
+            getArea() {
+                return Math.PI * this.radius * this.radius;
+            }
+            getColor(color) {
+                return this.color = color;
+            }
+        }
+        let circle1 = new Circle(30, "blue")
+
+        circle1.getRadius(50)
+        circle1.getColor("red")
+        // circle1.getArea()
+        console.log(circle1)
+        document.write(circle1.getArea())
+
+    </script>
 </body>
 </html>

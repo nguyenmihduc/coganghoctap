@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        class Mobile {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+                this.message = "";
+            }
+            setMessage(message) {
+                this.message = message;
+            }
+            getMessage() {
+                return this.message;
+            }
+            sendMessage(message, mobile) {
+                mobile.setMessage(message);
+            }
+        }
+        let iphone = new Mobile(1, "Iphone");
+        let android = new Mobile(2, "Samsung");
+        iphone.sendMessage("message vu minh duc chao nguyen minh duc", android);
+        let message = android.getMessage();
+        document.write(message + "<br>")
+
+        android.sendMessage("to day cafe nhé", iphone)
+        let message2 = iphone.getMessage();
+        document.write(message2)
+    </script>
 </body>
 </html>
