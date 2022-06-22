@@ -7,21 +7,40 @@
 <body>
     <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
     <script>
-        function HinhChuNhat(chieudai, chieurong) {
-            this.chieudai = chieudai;
-            this.chieurong = chieurong;
-            this.tinhDienTich = function () {
+        // function HinhChuNhat(chieudai, chieurong) {
+        //     this.chieudai = chieudai;
+        //     this.chieurong = chieurong;
+        //     this.tinhDienTich = function () {
+        //         return chieudai * chieurong;
+        //     }
+        //     this.tinhChuVi = function () {
+        //         return (chieudai + chieurong) * 2;
+        //     }
+        //     this.hienThi = function () {
+        //         let canvas = document.getElementById("myCanvas");
+        //         let ctx = canvas.getContext('2d');
+        //         ctx.fillStyle='#31fa2a';
+        //         ctx.fillRect(10, 10, chieurong, chieudai)
+        //
+        //     }
+        // }
+
+        class HinhChuNhat {
+            constructor(chieudai, chieurong) {
+                this.chieudai = chieudai;
+                this.chieurong = chieurong;
+            }
+            tinhDienTich() {
                 return chieudai * chieurong;
             }
-            this.tinhChuVi = function () {
+            tinhChuVi() {
                 return (chieudai + chieurong) * 2;
             }
-            this.hienThi = function () {
+            hienThi() {
                 let canvas = document.getElementById("myCanvas");
                 let ctx = canvas.getContext('2d');
                 ctx.fillStyle='#31fa2a';
                 ctx.fillRect(10, 10, chieurong, chieudai)
-
             }
         }
         let chieudai = +prompt("nhap chieu dai");
