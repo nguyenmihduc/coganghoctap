@@ -1,26 +1,60 @@
-function moveUp() {
-if (hero.top > 0 ) {
-hero.moveUp();
-}
-document.getElementById('game').innerHTML = hero.getHeroElement();
-setTimeout(moveUp, 100)
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
 
-function moveDown() {
-if (hero.top <  ) {
-hero.moveDown();
-}
-document.getElementById('game').innerHTML = hero.getHeroElement();
-setTimeout(moveDown, 100)
-}
+    class ElectricLamp{
+        constructor(status) {
+            this.status = status;
+        }
+        getStatus(){
+            return this.status;
+        }
+    }
+
+    class SwitchButton{
+        constructor(lamp, status) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        getLamp(){
+            return this.lamp;
+        }
+
+        setLamp(lamp){
+            this.lamp = lamp;
+        }
+
+        connectToLamp(Electriclamp){
+            return this.lamp = Electriclamp;
+        }
+
+        switchOff(){
+            this.lamp.status = false;
+            return this.status = false;
+        }
+
+        switchOn(){
+            this.lamp.status = true;
+            return this.status = true;
+        }
+    }
 
 
-// if (hero.left < window.innerWidth - hero.size) {
-//   hero.moveRight();
-//   }
-// if (hero.left >  0 ) {
-//   hero.moveLeft();
-// }
-// if (hero.top < window.innerHeight - hero.size) {
-//   hero.moveDown();
-// }
+    let electricLamp_1 = new ElectricLamp(false);
+
+    let switchButton_1 = new SwitchButton(electricLamp_1,false); // kết nối giữa  công tắc 1 và đèn 1
+
+    console.log(switchButton_1.switchOn());
+    console.log(electricLamp_1.getStatus());
+    console.log(switchButton_1.switchOff());
+    console.log(electricLamp_1.getStatus());
+
+</script>
+</body>
+</html>

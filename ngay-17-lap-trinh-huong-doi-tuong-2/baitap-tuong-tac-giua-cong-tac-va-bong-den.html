@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // class SwitchButton {
+        //     constructor(status, lamp) {
+        //         this.status = status;
+        //         this.lamp = lamp;
+        //     };
+        //     switchOn() {
+        //         this.lamp.status = true;
+        //         return this.status = true;
+        //     };
+        //     switchOff() {
+        //         this.lamp.status = false;
+        //         return this.status = false;
+        //     };
+        // }
+        //
+        // class ElectricLamp {
+        //     constructor(status) {
+        //         this.status = status;
+        //     };
+        //     getStatus() {
+        //         return this.status
+        //     }
+        // }
+        // let den1 = new ElectricLamp(false)
+        // let congtac1 = new SwitchButton(false,den1)
+        //
+        // console.log(congtac1.switchOn())
+        // console.log(den1.getStatus())
+        //
+        // console.log(congtac1.switchOff())
+        // console.log(den1.getStatus()
+        class CongTac {
+            constructor(trangthai, den) {
+                this.trangthai = trangthai;
+                this.den = den;
+            }
+            batOn() {
+                this.den.trangthai = "den sang";
+                return this.trangthai = "bat cong tac";
+            };
+            batOff() {
+                this.den.trangthai = "den tat";
+                return this.trangthai = "tat cong tac";
+            };
+        }
+
+        class BongDen {
+            constructor(trangthai) {
+                this.trangthai = trangthai;
+            };
+            nhantrangthai() {
+                return this.trangthai
+            }
+        }
+
+        let den1 = new BongDen("den tat");
+        let congtac1 = new CongTac("tat cong tac", den1)
+
+        console.log(congtac1.batOn())
+        console.log(den1.nhantrangthai())
+
+        console.log(congtac1.batOff())
+        console.log(den1.nhantrangthai())
+    </script>
+</body>
+</html>
