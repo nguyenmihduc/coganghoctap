@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--<script src="baitap-meo-bat-chuot.js"></script>-->
+    <script>
+        class Mouse {
+            status;
+            sound_mouse;
+            constructor(name, weight, speed) {
+                this.name_mouse = name;
+                this.weight_mouse = weight;
+                this.speed_mouse = speed;
+            }
+            Die() {
+                return this.status = false;
+            }
+            noDie() {
+                return this.status = true;
+            }
+            getStatus() {
+                if (this.status) {
+                    alert("chuột sống");
+                }else {
+                    alert("chuột chết");
+                }
+            }
+            actionMouse(sound) {
+                this.sound_mouse = sound;
+                alert(this.sound_mouse);
+            }
+        }
+
+        class Cat {
+            sound_cat;
+            constructor(name, weight, speed, mouse) {
+                this.name_cat = name;
+                this.weight_cat = weight;
+                this.speed_cat = speed;
+                this.mouse = mouse;
+            }
+            getSound_cat(sound) {
+                this.sound_cat = sound;
+                alert(this.sound_cat)
+            }
+            catchMouse() {
+                if (this.speed_cat > this.mouse.speed_mouse) {
+                    alert("meo da bat duoc chuot")
+                } else {
+                    alert("meo khong bat duoc chuot")
+                }
+            }
+            eatMouse() {
+                if (this.mouse.status) {
+                    this.weight_cat = this.weight_cat + this.mouse.weight_mouse;
+                    this.mouse.status = false;
+                    alert("chuot da bi meo an")
+                }
+            }
+
+        }
+
+        let mouse1 = new Mouse("mickey", 10, 100);
+        mouse1.noDie()
+        mouse1.getStatus()
+        mouse1.actionMouse("chit chit")
+        console.log(mouse1.name_mouse)
+        console.log(mouse1.weight_mouse)
+        console.log(mouse1.speed_mouse)
+
+        let cat1 = new Cat("Tom", 30, 200, mouse1)
+        cat1.getSound_cat("meo meo meo")
+        cat1.catchMouse()
+        cat1.eatMouse()
+        console.log(cat1.weight_cat)
+
+    </script>
+</body>
+</html>
