@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(tivi) {
+            this.tivi = tivi;
+        }
+        batTivi() {
+            return this.tivi.trangthai_tivi = "tivi bat";
+        }
+        tatTivi() {
+            return this.tivi.trangthai_tivi = "tivi tat";
+        }
+        chuyenKenh1() {
+            return this.tivi.hienkenh_tivi = "kenh1";
+        }
+        chuyenKenh2() {
+            return this.tivi.hienkenh_tivi = "kenh2";
+        }
+        chuyenKenh3() {
+            return this.tivi.hienkenh_tivi = "kenh3";
+        }
+        tangVolume() {
+            this.tivi.volume_tivi = this.tivi.volume_tivi + 1;
+        }
+        giamVolume() {
+            this.tivi.volume_tivi = this.tivi.volume_tivi - 1;
+        }
+    }
+
+    class Tivi {
+        constructor(trangthai, hienkenh, volume) {
+            this.trangthai_tivi = trangthai;
+            this.hienkenh_tivi = hienkenh;
+            this.volume_tivi = volume;
+        }
+    }
+
+    let tivi1 = new Tivi("tivi tat","kenh1", 10)
+    let remote1 = new Remote(tivi1);
+
+    console.log(tivi1.trangthai_tivi)
+
+    remote1.batTivi()
+
+    console.log(tivi1.trangthai_tivi)
+    console.log(tivi1.hienkenh_tivi)
+    console.log(tivi1.volume_tivi)
+
+
+    remote1.chuyenKenh2()
+    remote1.tangVolume()
+    remote1.tangVolume()
+    remote1.chuyenKenh3()
+    remote1.tangVolume()
+    remote1.giamVolume()
+
+    console.log(tivi1.trangthai_tivi)
+    console.log(tivi1.hienkenh_tivi)
+    console.log(tivi1.volume_tivi)
+
+    remote1.tatTivi()
+
+    console.log(tivi1.trangthai_tivi)
+
+
+
+
+    </script>
+</body>
+</html>
