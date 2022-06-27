@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )-->
+<body>
+    <script>
+        let array = [1,2,3,"-",4,5,"-",6,7]
+        let newarray = []
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === "-") {
+                array[i] = "_"
+            }else {
+                array[i] = array[i]
+            }
+            newarray.push(array[i])
+        }
+        document.write(newarray)
+    </script>
+</body>
+</html>
