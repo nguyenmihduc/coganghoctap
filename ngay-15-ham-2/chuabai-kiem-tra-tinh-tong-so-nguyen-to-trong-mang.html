@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let arr = [2, 5, 10, 12, 13, 33, 19];
+        let total = sumPrimeNumberInArray(arr);
+        alert(total);
+
+        function sumPrimeNumberInArray(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+                let n = arr[i];
+                if (checkPrime(n)) {
+                    total += n;
+                }
+            }
+            return total;
+        }
+
+        function checkPrime(n) {
+            if (n < 2) {
+                return false;
+            } else if (n === 2) {
+                return true;
+            } else {
+                let isPrime = true;
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    </script>
 </body>
 </html>

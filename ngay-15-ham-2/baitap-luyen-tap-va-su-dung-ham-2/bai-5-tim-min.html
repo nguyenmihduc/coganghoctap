@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<body>
+    <p id = "array"></p>
+    <p id = "min"></p>
+    <script>
+
+        function CheckMin() {
+            let arraynumber = [];
+            for (let i = 0; i <3; i++) {
+                let number = +prompt("enter a number");
+                arraynumber.push(number);
+            }
+            document.getElementById("array").innerHTML = "dãy số của bạn là: "+ arraynumber
+            let min = arraynumber[0];
+            for (let j = 0; j < arraynumber.length; j++) {
+                if (arraynumber[j] < min) {
+                    min = arraynumber[j];
+                }
+            }
+            document.write(min + ' là số nhỏ nhất trong dãy số của bạn')
+        }
+
+        CheckMin()
+    </script>
+</body>
+</html>

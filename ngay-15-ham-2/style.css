@@ -1,0 +1,52 @@
+
+
+#table-list-product {
+    width: 500px;
+    background-color: antiquewhite;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#table-list-product tr, td {
+    border: 1px solid #d5d2d2;
+}
+
+#head-title {
+    background-color: aqua;
+}
+
+.delete-product{
+    background-color: red;
+    color: white;
+}
+
+#form-add-product {
+    width: 300px;
+    background-color: aquamarine;
+    border-collapse: collapse;
+}
+
+#form-add-product input {
+    width: 95%;
+    float: left;
+}
+
+#form-add-product tr, td {
+    border: 1px solid #d5d2d2;
+}
+
+
+.form-add {
+    width: 400px;
+    float: left;
+}
+
+.table-list {
+    width: 500px;
+    float: left;
+}
+
+.update-product {
+    background-color: blue;
+    color: white
+}

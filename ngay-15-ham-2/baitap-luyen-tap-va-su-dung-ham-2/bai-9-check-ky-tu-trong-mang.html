@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.-->
+<!--Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.-->
+<body>
+    <script>
+        function CharacterCheck(string, chacracter) {
+            let array = string.split('')
+            document.write(array + '<br>')
+            console.log(array[3])
+
+            let count = 0;
+            let index = -1;
+            for (let i = 0; i < array.length; i++) {
+                if (chacracter === array[i]) {
+                    index = i;
+                    count++
+                }
+            }
+            if (index == -1) {
+                document.write(index+ '<br>')
+            } else {
+                document.write(count+ '<br>')
+            }
+        }
+        CharacterCheck('asmcbxbncrlweeyuw', 'm')
+        CharacterCheck('ASMCIEJKLSNK', 'e')
+    </script>
+</body>
+</html>
